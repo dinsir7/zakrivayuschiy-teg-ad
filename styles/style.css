@@ -29,8 +29,11 @@
   font-variation-settings: 'wght' var(--fweight-main, 400);
   background-size: cover;
   background-attachment: fixed;
-  background-image: var(--background-image-main, repeating-linear-gradient(to bottom, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), repeating-linear-gradient(to right, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
-  linear-gradient(to bottom, #e7e7e7, #e7e7e7 0.01%, #1a1a1a 100%));
+  background-image: var(--background-image-main, 
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px), 
+    repeating-linear-gradient(to right, #d3d3d3 0 2px, rgb(211 211 211 / 0) 2px 4px),
+    linear-gradient(to bottom, #e7e7e7, #e7e7e7 0.01%, #1a1a1a 100%)
+  );
 }
 
 .header {
@@ -67,7 +70,7 @@
 }
 
 .button__text {
-  font-size:  0.875rem;
+  font-size: 0.875rem;
   align-items: center;
   line-height: var(--line-height-text-botton);
   color: var(--accent-color-text);
@@ -112,36 +115,35 @@
   aspect-ratio: 1 / 1;
 }
 
-.filter-grayscale img {
+.filter-grayscale {
   filter: grayscale(0.7);
 }
 
-.filter-opacity img {
+.filter-opacity {
   filter: opacity(0.8);
 }
 
-.filter-mix img {
+.filter-mix {
   filter: invert(0.7) contrast(1) brightness(100%);
 } 
 
-.filter-contrast img {
+.filter-contrast {
   filter: contrast(20%);
 }
 
-.filter-invert img {
-  
+.filter-invert {
   filter: invert(0.7);
 }
 
-.filter-sepia img {
+.filter-sepia {
   filter: sepia(80%);
 }
 
-.filter-blur img {
+.filter-blur {
   filter: blur(0.2rem);
 }
 
-.filter-hue-rotate img {
+.filter-hue-rotate {
   filter: hue-rotate(0.5turn);
 }
 
@@ -153,10 +155,10 @@
   inset-inline-end: clamp(0.75rem, 0.4859rem + 1.1268vw, 1.5rem);
   inset-block-start: clamp(1.5rem, 1.4778rem + 0.0946vw, 1.563rem);
   text-shadow:
-  -1px 0 var(--background-color), 
-  0 1px var(--background-color), 
-  1px 0 var(--background-color), 
-  0 -1px var(--background-color);
+    -1px 0 var(--background-color), 
+    0 1px var(--background-color), 
+    1px 0 var(--background-color), 
+    0 -1px var(--background-color);
   mix-blend-mode: hard-light;
   z-index: 1;
 }
@@ -243,6 +245,9 @@ svg.like-icon {
 }
 
 .button {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--background-color);
   transition: box-shadow 0.3s ease;
 }
 
@@ -260,12 +265,6 @@ svg.like-icon {
 
 .card__icon-button:focus-visible {
   border: 2px solid #000;
-}
-
-.button {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--background-color);
 }
 
 .button::before {
@@ -420,7 +419,7 @@ dialog::backdrop {
     flex-direction: row;
   }
 
-  svg.floppy  {
+  svg.floppy {
     width: 21px;
   }
 
