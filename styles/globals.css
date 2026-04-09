@@ -9,7 +9,11 @@
 }
 
 body {
+<<<<<<< HEAD
   margin: 0 auto;
+=======
+  margin: 0;
+>>>>>>> 018ddbdc2f1c70c9f7f9f0e9287057db98bb6f44
 }
 
 h1,
